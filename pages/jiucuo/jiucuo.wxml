@@ -1,0 +1,20 @@
+<!--jiucuo.wxml-->
+<view class="page">
+    <view class="page__bd">
+        <form bindsubmit="formSubmit">
+            <view class="weui-cells__title bk ">纠错信息</view>
+            <view class="weui-cells weui-cells_after-title">
+                <view class="weui-cell">
+                    <view class="weui-cell__bd">
+                        <textarea class="weui-textarea" style="height: 2em" maxlength="50" bindinput="bindinput" name="text" />
+                        <view class="weui-textarea-counter">{{charts}}/50</view>
+                    </view>
+                </view>
+            </view>
+            <view class="weui-btn-area">
+                <button class="weui-btn" type="primary" formType="submit">发送</button>
+                <button class="weui-btn" bindtap="back">返回</button>
+            </view>
+        </form>
+    </view>
+</view>

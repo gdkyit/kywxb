@@ -1,0 +1,46 @@
+<view class="page">
+    <!-- <navigator url="../exam_examine/exam_examine">
+        <image src="/resource/img/module-kaoshi.jpg"> </image>
+    </navigator>
+    <navigator url="../exam_examRace/exam_examRace">
+        <image src="/resource/img/module-qiangda.jpg"></image>
+    </navigator>
+    <navigator url="../exam_examRecord/exam_examRecord">
+        <image src="/resource/img/module-myrecord.jpg"></image>
+    </navigator>
+    <navigator url="../xdjl/xdjl">
+        <image src="/resource/img/module-keypoint.jpg"></image>
+    </navigator> -->
+    <view class="page__bd">
+        <view class="weui-cells weui-cells_after-title">
+            <navigator url="../exam_examine/exam_examine" class="weui-cell weui-cell_access w-r" hover-class="weui-cell_active">
+                <view class="weui-cell__hd">
+                    <view class="icon-b bl"><i class="icon czs-write-l"/></view>
+                </view>
+                <view class="weui-cell__bd">考试</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+            </navigator>
+            <navigator url="../exam_examRace/exam_examRace" class="weui-cell weui-cell_access w-r" hover-class="weui-cell_active">
+                <view class="weui-cell__hd">
+                  <view class="icon-b ye"><i class="icon czs-geometry-shape-l"/> </view>
+                </view>
+                <view class="weui-cell__bd">逢训必考</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+            </navigator>
+             <navigator url="../exam_examRecord/exam_examRecord" class="weui-cell weui-cell_access w-r" hover-class="weui-cell_active">
+                <view class="weui-cell__hd">
+                    <view class="icon-b or"><i class="icon czs-medal-l"/> </view>
+                </view>
+                <view class="weui-cell__bd">考试记录</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+            </navigator> 
+            <navigator url="../xdjl/xdjl" class="weui-cell weui-cell_access w-r" hover-class="weui-cell_active">
+                <view class="weui-cell__hd">
+                    <view class="icon-b gr"><i class="icon czs-forum"/> </view>
+                </view>
+                <view class="weui-cell__bd">试卷点评</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+            </navigator> 
+        </view>
+    </view>
+</view>

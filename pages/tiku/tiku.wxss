@@ -1,0 +1,8 @@
+/* tiku.wxss */
+.desc{
+    color: #888;
+    font-size: 12px;
+}
+.icon{
+    margin-right:15px
+}

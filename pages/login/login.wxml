@@ -1,0 +1,21 @@
+<!--login.wxml-->
+<view class="page">
+  <image src="/resource/img/login.jpg" mode="aspectFill"></image>
+  <form bindsubmit="formSubmit">
+    <view class="form-area">
+      <view class="title">
+        <view class="h1">用手机号码登录</view>
+      </view>
+
+      <view class="input-box">
+        <input class="input" placeholder="输入手机号" name="username" placeholder-class="placeholder" />
+      </view>
+      <view class="input-box">
+        <input class="input" placeholder="输入密码" name="password" type="password" placeholder-class="placeholder" />
+      </view>
+      <view class="weui-btn-area">
+        <button class="weui-btn" loading="{{loading}}" disabled="{{loading}}" formType="submit" hover-class="btn-hover" type="primary">登录</button>
+      </view>
+    </view>
+  </form>
+</view>

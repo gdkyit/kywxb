@@ -1,0 +1,15 @@
+.weui-media-box{
+    padding: 0;
+}
+.weui-media-box__title{
+    font-size:16px;
+
+}
+.weui-cell__ft_in-access{
+    font-size: 14px;
+}
+.weui-media-box__desc{
+    overflow: visible;
+    padding-top: 5px;
+    -webkit-line-clamp:100
+}

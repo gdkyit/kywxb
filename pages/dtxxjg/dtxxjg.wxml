@@ -1,0 +1,38 @@
+<!--dtxxjg.wxml-->
+<!-- 答题学习结果 -->
+<view class="page">
+    <view class="page__bd">
+        <view class="weui-msg">
+            <view class="weui-msg__icon-area">
+                <icon type="success" size="93"></icon>
+            </view>
+            <view class="weui-msg__text-area">
+                <view class="weui-msg__title">答题完成</view>
+                <view class="weui-cells__title">本次学习成绩</view>
+                <view class="weui-cells weui-cells_after-title no-br">
+                    <view class="weui-cell">
+                        <view class="weui-cell__bd label">总答题数：</view>
+                        <view class="weui-cell__bd">{{counts}}</view>
+                    </view>
+                    <view class="weui-cell">
+                        <view class="weui-cell__bd label">得分：</view>
+                        <view class="weui-cell__bd">{{score}}</view>
+                    </view>
+                    <view class="weui-cell">
+                        <view class="weui-cell__bd label">正确题数：</view>
+                        <view class="weui-cell__bd gr">{{rightCount}}</view>
+                    </view>
+                    <view class="weui-cell">
+                        <view class="weui-cell__bd label">错误题数：</view>
+                        <view class="weui-cell__bd rd">{{wrongCount}}</view>
+                    </view>
+                </view>
+            </view>
+            <view class="weui-msg__opr-area">
+                <view class="weui-btn-area">
+                    <button class="weui-btn" type="primary" bindtap="bindback">确定</button>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

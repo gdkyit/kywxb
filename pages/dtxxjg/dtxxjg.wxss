@@ -1,0 +1,10 @@
+/* dtxxjg.wxss */
+.label{
+    text-align: left;
+}
+.gr{
+    color:#3FBE69
+}
+.rd {
+    color:#f04134
+}

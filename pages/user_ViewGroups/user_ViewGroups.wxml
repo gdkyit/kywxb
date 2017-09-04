@@ -1,0 +1,15 @@
+
+<view>
+<view class="weui-cells__title">所属群组</view>
+        <view class="weui-cells weui-cells_after-title">
+                <label class="weui-cell weui-check__label" wx:for="{{selectItems}}" wx:key="value">
+                    <view class="weui-cell__bd">
+                        <view>{{item.GROUP_NAME}}</view>
+                        <view style="font-size: 13px;color: #888888;">{{item.MS}}</view>
+                    </view>
+                </label>
+        </view>
+</view>
+<view class="weui-btn-area">
+        <button class="weui-btn"  type="defult" bindtap="backTo" >返回</button>
+</view>

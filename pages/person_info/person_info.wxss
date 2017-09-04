@@ -1,0 +1,31 @@
+/* person_info.wxss */
+.info-user-wrap{
+    background-color: #fff;
+    padding: 15px;
+}
+
+.info-avatar-img{
+    width:128rpx;
+    height: 128rpx;
+    margin:0 30rpx 0 0;
+    border-radius: 50%
+}
+.info-user-name{
+    font-weight: bold;
+}
+.info-user-dept{
+    color:#353535;
+    font-size: 14px
+}
+.info-user-desc{
+    margin-top:20rpx;
+    font-size: 14px;
+    color: #353535
+}
+.info-rank-score{
+    background-color: #37A45D;
+    border-radius: 4px;
+    font-size:14px;
+    padding:4px;
+    color:#fff
+}

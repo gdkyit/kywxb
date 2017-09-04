@@ -1,0 +1,14 @@
+<!--zstsmx.wxml-->
+<!--知识库文章明细-->
+<import src="../../lib/wxParse/wxParse.wxml"/>
+<view class="page" bindtouchstart="bindtouchstart" bindtouchend="bindtouchend">
+    <view class="page__hd">
+        <view class="page__title">{{title}}</view>
+        <view class="page__desc">{{date}}</view>
+    </view>
+    <view class="page__bd">
+        <view class="weui-article">
+            <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+        </view>
+    </view>
+</view>

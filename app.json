@@ -1,0 +1,74 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/kaoshi/kaoshi",
+    "pages/exam_examine/exam_examine",
+    "pages/exam_examine_testing/exam_examine_testing",
+    "pages/exam_examRace/exam_examRace",
+    "pages/exam_examRecord/exam_examRecord",
+    "pages/exam_examRecord_Detail/exam_examRecord_Detail",
+    "pages/user_userInfoUpdate/user_userInfoUpdate",
+    "pages/user_changedPassword/user_changedPassword",
+    "pages/user_learningSubscription/user_learningSubscription",
+    "pages/user_rankSetting/user_rankSetting",
+    "pages/user_obtainLike/user_obtainLike",
+    "pages/user_obtainCorrection/user_obtainCorrection",
+    "pages/user_ViewGroups/user_ViewGroups",
+    "pages/user_joinGroups/user_joinGroups",
+    "pages/user_userMain/user_userMain",
+    "pages/user_CheckIn/user_CheckIn",
+    "pages/login/login",
+    "pages/ranking/ranking",
+    "pages/learning/learning",
+    "pages/tiku/tiku",
+    "pages/dtxx/dtxx",
+    "pages/jiucuo/jiucuo",
+    "pages/dtjl/dtjl",
+    "pages/zsts/zsts",
+    "pages/zstsmx/zstsmx",
+    "pages/xdjl/xdjl",
+    "pages/xdjlmx/xdjlmx",
+    "pages/person_info/person_info",
+    "pages/dtxxjg/dtxxjg",
+    "pages/dtjlmx/dtjlmx",
+    "pages/about/about"
+  ],
+  "tabBar": {
+    "selectedColor": "#515151",
+    "color": "#bfbfbf",
+    "list": [
+       {
+        "pagePath": "pages/ranking/ranking",
+        "iconPath": "resource/img/icon-paihangbang.png",
+        "selectedIconPath": "resource/img/icon-paihangbang-act.png",
+        "text": "排行榜"
+      },
+      {
+        "pagePath": "pages/learning/learning",
+        "iconPath": "resource/img/icon-xuexi.png",
+        "selectedIconPath": "resource/img/icon-xuexi-act.png",
+        "text": "答题学习"
+      },
+      {
+        "pagePath": "pages/kaoshi/kaoshi",
+        "iconPath": "resource/img/icon-kaoshi.png",
+        "selectedIconPath": "resource/img/icon-kaoshi-act.png",
+        "text": "考试"
+      },
+     
+      {
+        "pagePath": "pages/user_userMain/user_userMain",
+        "iconPath": "resource/img/icon-me.png",
+        "selectedIconPath": "resource/img/icon-me-act.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#2F3442",
+    "navigationBarTitleText": "微学宝",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#f5f5f9"
+  }
+}

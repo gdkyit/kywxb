@@ -1,0 +1,22 @@
+<view class="weui-cells__title">考试记录答题明细</view>
+<view class="weui-cells weui-cells_after-title">
+    <block wx:if="{{recordList.length!=0}}" wx:for="{{recordList}}" wx:key="unique">
+    <view class="weui-cell weui-cell_access weui-flex" >
+        <view class="weui-media-box weui-media-box_text weui-flex__item">
+            <view class="weui-media-box__title weui-media-box__title_in-text" style="color:goldenrod">你的答案是{{item.answer}} ,回答{{item.result=="Y"?"正确":"错误"}}，共得分{{item.score}}</view>
+            <view class="weui-media-box__desc">{{item.content}}</view>
+            <view class="weui-media-box__desc">正确答案：{{item.da}}</view>
+        </view>
+    </view>
+    </block>
+    <block wx:if="{{recordList.length==0}}" >
+        <view class="page__bd">
+            <view class="weui-loadmore weui-loadmore_line">
+                <view class="weui-loadmore__tips weui-loadmore__tips_in-line">暂无数据</view>
+            </view>
+            <view class="weui-loadmore weui-loadmore_line weui-loadmore_dot">
+                <view class="weui-loadmore__tips weui-loadmore__tips_in-line weui-loadmore__tips_in-dot"></view>
+            </view>
+        </view>
+    </block>
+</view>

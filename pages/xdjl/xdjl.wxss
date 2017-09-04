@@ -1,0 +1,16 @@
+/* xdjl.wxss */
+.page__bd{
+    padding-top:15px
+}
+.title{
+    white-space: normal
+}
+.panel{
+    margin-left:15px;
+    margin-right:15px
+}
+.no-result{
+    color:#888888;
+    text-align: center;
+    padding:200rpx 0 600rpx 0;
+}

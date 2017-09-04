@@ -1,0 +1,217 @@
+<template name="selfInfo">
+    <view class="desc">点击名字可查看用户信息</view>
+    <view class="weui-panel weui-panel_access no-br">
+        <view class="weui-panel__hd"><i class="czs-location-l bold" /> 我的位置{{currentSubCat?'（'+currentSubCat+'）':''}} </view>
+        <view class="weui-panel__bd">
+            <view class="weui-media-box weui-flex">
+
+                <block wx:if="{{!isNull}}">
+                    <view class="weui-flex__item my-name">
+                        <navigator url="../person_info/person_info?uid={{user_id}}">{{user_name}}<span class="clickable-arrow"> › </span>
+                        </navigator>
+                    </view>
+                    <view class="my-jf">
+                        <view>积分：</view>
+                        <view>{{score}}</view>
+                    </view>
+                    <view class="my-rank"><span class="gr-b">{{rank}}</span>名</view>
+                </block>
+                <block wx:else>
+                    <view class="rank-self-null">{{tips}}</view>
+                </block>
+            </view>
+        </view>
+    </view>
+</template>
+
+<template name="rankList">
+    <view class="weui-cells__title">
+        <view class="weui-flex">
+            <view class="mc">
+                <view>名次</view>
+            </view>
+            <view class="weui-flex__item">
+                <view>用户</view>
+            </view>
+            <view class="cj">
+                <view>成绩</view>
+            </view>
+        </view>
+    </view>
+    <view class="weui-cells weui-cells_after-title no-br">
+        <navigator class="weui-cell" wx:for="{{scoreRank}}" wx:key="user_id" url="../person_info/person_info?uid={{item.user_id}}">
+            <view class="mc">
+                <view>{{item.rank}}</view>
+            </view>
+            <view class="weui-flex__item">
+                <view>{{item.user_name}} <span class="clickable-arrow"> › </span></view>
+            </view>
+            <view class="cj">
+                <view>{{item.score}}</view>
+            </view>
+        </navigator>
+    </view>
+</template>
+
+<!--ranking.wxml-->
+<view class="page">
+    <view class="page__bd">
+        <view class="userTop">
+            <view class="weui-flex userHeader">
+                <image class="userinfo-avatar" src="{{IUrl}}" mode="aspectFill" binderror="onImageError" />
+                <view class="user-header-name">
+                    <text class="userinfo-nickname">{{userName}}</text>
+                    <import src="../template/rankLevel.wxml" />
+                    <template wx:if="{{(!!personScoreRank.score)&&personScoreRank.score!=0}}" is="rankLevel" data="{{score:personScoreRank.score}}"
+                    />
+                </view>
+                <view class="weui-flex__item user-header-gxz">
+                    <text>出题贡献值：{{contribution}}</text>
+                </view>
+            </view>
+
+            <view class="weui-flex  rank">
+                <view class="weui-flex__item  ">
+                    <view class="rankTitle">总积分</view>
+                    <view class="rankValue">{{(!personScoreRank.score)&&personScoreRank.score!=0?"无":totalScore}}</view>
+                </view>
+                <view class="weui-flex__item   ">
+                    <view class="rankTitle">总积分排名</view>
+                    <view class="rankValue">{{(!personScoreRank.score)&&personScoreRank.score!=0?"无":personScoreRank.rank}}</view>
+                </view>
+                <view class="weui-flex__item ">
+                    <view class="rankTitle">已做题目</view>
+                    <view class="rankValue">{{(!personScoreRank.score)&&personScoreRank.score!=0?"无":totalUserResult.totalCount}}</view>
+                </view>
+            </view>
+            <view class="user-group">积分榜所在群组：{{groupName}}</view>
+            <!-- <view class="weui-flex rank">
+                
+                <view class="weui-flex__item">
+                    <view class="rankTitle">正确率</view>
+                    <view class="rankValue">{{rightPersent}}</view>
+                </view>
+            </view> -->
+        </view>
+        <view class="tabs weui-flex">
+            <view data-phb="{{index}}" class="tab-pane weui-flex__item {{index == current?'current':''}}" bindtap="bindPhbChange" wx:for="{{phblist}}">{{item}}</view>
+        </view>
+        <!-- <view class="weui-panel no-br">
+            <view class="weui-panel__hd hd-picker no-br">
+                <picker value="{{current}}" range="{{phblist}}" bindchange="bindPhbChange">
+                    <view class="picker-title">
+                        <i class="czs-category-l pt-u gr bold" />
+                        <span class="pt-u">{{phblist[current]}}</span>
+                        <i class="czs-angle-down-l pt-u" />
+                    </view>
+                </picker>
+            </view>
+        </view> -->
+        <block wx:if="{{view == '0'}}">
+            <template is="selfInfo" data="{{...userScoreRank}}" />
+            <template is="rankList" data="{{scoreRank}}" />
+        </block>
+
+        <block wx:elif="{{view == '11'}}">
+            <view class="weui-cells__title">选择需查看的群组</view>
+            <view class="weui-panel weui-panel_access no-br">
+                <view class="weui-panel__bd">
+                    <view wx:if="{{phbSubList.length == 0}}" class="rank-list-empty">未加入任何群组</view>
+                    <view wx:for="{{phbSubList}}" wx:key="ID_" class="weui-media-box weui-media-box_text" bindtap="bindUserGroup" data-gid="{{item.ID_}}"
+                        data-scat="{{item.GROUP_NAME}}">
+                        <view class="weui-media-box__title weui-media-box__title_in-text">{{item.GROUP_NAME}}</view>
+                        <view class="weui-media-box__desc">{{item.MS}}</view>
+                    </view>
+                </view>
+            </view>
+        </block>
+        <block wx:elif="{{view == '12'}}">
+            <template is="selfInfo" data="{{...userScoreRank,currentSubCat:currentSubCat}}" />
+            <template is="rankList" data="{{scoreRank}}" />
+            <image class="back fixed" data-pv="11" src="/resource/img/back.png" bindtap="bindback" />
+        </block>
+
+        <block wx:elif="{{view == '21'}}">
+            <view class="weui-cells__title">选择需查看的考试记录</view>
+            <view class="weui-panel weui-panel_access no-br">
+                <view class="weui-panel__bd">
+                    <view wx:if="{{phbSubList.length == 0}}" class="rank-list-empty">未有考试记录</view>
+                    <view wx:for="{{phbSubList}}" wx:key="id_" class="weui-media-box weui-media-box_text" bindtap="bindUserExam" data-eid="{{item.id_}}"
+                        data-scat="{{item.TITLE}}">
+                        <view class="weui-media-box__title weui-media-box__title_in-text no-ws">{{item.TITLE}}</view>
+                        <view class="weui-media-box__desc">开始时间：{{item.START_TIME}}</view>
+                        <view class="weui-media-box__desc">结束时间：{{item.END_TIME}}</view>
+                    </view>
+                </view>
+            </view>
+        </block>
+        <block wx:elif="{{view == '22'}}">
+            <view class="desc">点击名字可查看用户信息</view>
+            <view class="weui-panel weui-panel_access no-br">
+                <view class="weui-panel__hd"><i class="czs-location-l bold" /> 我的位置{{currentSubCat?'（'+currentSubCat+'）':'0'}} </view>
+                <view class="weui-panel__bd">
+                    <view class="weui-media-box weui-flex">
+                        <view class="weui-flex__item my-name">{{userExamRank.user_name}}<span class="clickable-arrow"> › </span></view>
+                        <view class="my-time">
+                            <view>用时：</view>
+                            <view>{{userExamRank.time}}秒</view>
+                        </view>
+                        <view class="my-jf">
+                            <view>分数：</view>
+                            <view>{{userExamRank.score}}</view>
+                        </view>
+                        <view class="my-rank"><span class="gr-b">{{userExamRank.rank}}</span>名</view>
+                    </view>
+                </view>
+            </view>
+            <view class="weui-cells__title">
+                <view class="weui-flex">
+                    <view class="mc">
+                        <view>名次</view>
+                    </view>
+                    <view class="weui-flex__item">
+                        <view>用户</view>
+                    </view>
+                    <!-- <view class="time">
+                        <view>用时</view>
+                    </view> -->
+                    <view class="cj">
+                        <view>分数</view>
+                    </view>
+                </view>
+            </view>
+            <view class="weui-cells weui-cells_after-title no-br">
+                <navigator class="weui-cell" wx:for="{{examRank}}" wx:key="user_id" url="../person_info/person_info?uid={{item.user_id}}">
+                    <view class="mc">
+                        <view>{{item.rank}}</view>
+                    </view>
+                    <view class="weui-flex__item">
+                        <view>{{item.user_name}}<span class="clickable-arrow"> › </span></view>
+                    </view>
+                    <!-- <view class="time">
+                        <view>{{item.time}}秒</view>
+                    </view> -->
+                    <view class="cj">
+                        <view>{{item.score}}</view>
+                    </view>
+                </navigator>
+            </view>
+            <image class="back fixed" data-pv="21" src="/resource/img/back.png" bindtap="bindback" />
+        </block>
+
+        <block wx:elif="{{view == '31'}}">
+            <view class="weui-cells__title">选择需查看排名的分类</view>
+            <view class="weui-cells weui-cell_access no-br">
+                <view class="weui-cell weui-cell_access" wx:for="{{phbSubList}}" wx:key="id_" bindtap="bindUserFlpm" data-eid="{{item.ID_}}"
+                    data-scat="{{item.TKMC}}">
+                    <view class="weui-cell__bd">{{item.TKMC}}</view>
+                </view>
+            </view>
+        </block>
+        <block wx:if="{{view == '32'}}">
+            <template is="selfInfo" data="{{...userScoreRank,currentSubCat:currentSubCat}}" />
+            <template is="rankList" data="{{scoreRank}}" />
+            <image class="back fixed" data-pv="31" src="/resource/img/back.png" bindtap="bindback" />
+        </block>
+    </view>
+</view>

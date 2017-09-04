@@ -1,0 +1,37 @@
+
+<!--导航条 param:{navType:导航条类型（字符串）,currNum:tab值（数字）}-->
+<template name="TopNav">
+    <import src="navTamplate.wxml"/>
+    <template is="{{navType}}" data="{{currNum}}"  />
+</template>
+
+<!--需补齐url-->
+<template name="RankingNav">
+<view class="navbar">
+  <block wx:for="{{['url','url','url','url','url']}}" wx:for-index="i" wx:for-item="iUrl" wx:key="unique">
+    <block wx:for="{{['个人秀','积分榜','群组榜','考试榜','业务榜']}}" wx:for-index="j" wx:for-item="jName" wx:key="unique">
+      <navigator wx:if="{{i==j}}" class="item {{currNum==j ? 'active' : ''}}" style="width:{{1/5*100}}%" url="{{iUrl}}" open-type="redirect" hover-class="other-navigator-hover"  >{{jName}}</navigator>
+    </block>
+  </block>
+</view>
+</template>
+
+<template name="LearningNav">
+<view class="navbar">
+  <block wx:for="{{['url','url','url']}}" wx:for-index="i" wx:for-item="iUrl" wx:key="unique">
+    <block wx:for="{{['题库','答题记录','知识点推送']}}" wx:for-index="j" wx:for-item="jName" wx:key="unique">
+      <navigator wx:if="{{i==j}}" class="item {{currNum==j ? 'active' : ''}}" style="width:{{1/3*100}}%" url="{{iUrl}}" open-type="redirect" hover-class="other-navigator-hover"  >{{jName}}</navigator>
+    </block>
+  </block>
+</view>
+</template>
+
+<template name="ExaminingNav">
+<view class="navbar">
+  <block wx:for="{{['../../pages/exam_examine/exam_examine','../../pages/exam_answerRace/exam_answerRace','url']}}" wx:for-index="i" wx:for-item="iUrl" wx:key="unique">
+    <block wx:for="{{['考试','抢答','考试记录']}}" wx:for-index="j" wx:for-item="jName" wx:key="unique">
+      <navigator wx:if="{{i==j}}" class="item {{currNum==j ? 'active' : ''}}" style="width:{{1/3*100}}%" url="{{iUrl}}" open-type="navigate" hover-class="other-navigator-hover"  >{{jName}}</navigator>
+    </block>
+  </block>
+</view>
+</template>

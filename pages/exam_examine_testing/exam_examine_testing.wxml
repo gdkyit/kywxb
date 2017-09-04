@@ -1,0 +1,86 @@
+<block wx:if="{{!endExam}}" >
+    <form bindsubmit="putAnswer" >
+    <view class="fixBottom">
+        <view class="weui-panel weui-panel_access ">
+                <view class="weui-panel__hd">题目来源：{{currContext.lytitle}}</view>
+                <view class="weui-panel__bd">
+                    <view class="weui-media-box weui-media-box_text">
+                        <view class="weui-media-box__title weui-media-box__title_in-text">{{num}}.（{{currContext.MODE==0?'判断题':currContext.MODE==1?'单选题':'多选题'}}）{{currContext.CONTENT}}</view>
+                        <view class="answerText">
+                            <radio-group name="selectedAnswer" hidden="{{currContext.MODE==2}}" bindchange="radioChange">
+                                <label class="weui-cell weui-check__label {{answerStyle[index]}}" wx:for="{{selectItems}}" wx:key="value">
+                                    <radio class="weui-check" value="{{item.XZ_KEY}}" checked="{{item.checked}}"/>
+                                    <view class="weui-cell__hd weui-check__hd_in-checkbox">
+                                        <icon class="weui-icon-checkbox_circle" type="circle" size="23" wx:if="{{!item.checked}}"></icon>
+                                        <icon class="weui-icon-checkbox_success" type="success" size="23" wx:if="{{item.checked}}"></icon>
+                                    </view>
+                                    <view class="weui-cell__bd ">{{item.XZ_KEY}}.{{item.CONTENT}}</view>
+                                </label>
+                            </radio-group>
+                            <checkbox-group name="selectedAnswer" hidden="{{currContext.MODE!=2}}" bindchange="checkboxChange">
+                                <label class="weui-cell weui-check__label {{answerStyle[index]}}" wx:for="{{selectItems}}" wx:key="value">
+                                    <checkbox value="{{item.XZ_KEY}}" checked="{{item.checked}}"/>
+                                    <view class="weui-cell__bd ">{{item.XZ_KEY}}.{{item.CONTENT}}</view>
+                                </label>
+                            </checkbox-group>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class="weui-flex tips">
+                <view class="tips_hd"><i class="czs-info-l icon"/>提示</view>
+                <view class="weui-flex__item"><text hidden="{{rs==''}}" >你选择了 {{rs}} {{rsText}}</text></view>
+            </view>
+            <view class="weui-footer weui-footer_fixed-bottom">
+                <view class="weui-flex report">
+                <view class="weui-flex__item">
+                    <view class="r-hd">得分</view>
+                    <view class="r-ct gr">{{totalScore}}</view>
+                </view>
+                <view class="weui-flex__item">
+                    <view class="r-hd">已回答</view>
+                    <view class="r-ct"><span class="">{{finishIss}}</span>/{{totalIss}}</view>
+                </view>
+                <view class="weui-flex__item">
+                    <view class="r-hd">答对</view>
+                    <view class="r-ct"><span class="gr">{{rightCount}}</span></view>
+                </view>
+                <view class="weui-flex__item">
+                    <view class="r-hd">答错</view>
+                    <view class="r-ct"><span class="rd">{{worngCount}}</span></view>
+                </view>
+                </view>
+                <view class="weui-flex">
+                <view class="weui-flex__item">
+                    <button disabled="{{buttonDisable}}" type="primary" formType="submit" loading="{{buttonLoading}}">
+                    提交答案</button>
+                </view>
+                </view>
+            </view>
+    </view>
+    </form>
+</block>
+<block wx:if="{{endExam}}">
+    <view class="userTop" >
+        <view class="endExamHeader">考试结束</view>
+        <view class="rankLeft topBoder" >
+            <text class="rankTitle">总分数</text>
+            <view class="rankValue">{{totalScore}}</view>
+        </view>
+        <view class="rankRight topBoder" >
+            <text class="rankTitle">考试总时长</text>
+            <view class="rankValue">{{totalTime}}秒</view>
+        </view>
+        <view class="rankLeft" >
+            <text class="rankTitle">答对题目</text>
+            <view class="rankValue">{{rightCount}}</view>
+        </view>
+        <view class="rankRight" >
+            <text class="rankTitle">正确率</text>
+            <view class="rankValue">{{rightPersent}}%</view>
+        </view>
+    </view>
+    <view class="weui-btn-area">
+        <button class="weui-btn"  type="defult" bindtap="backTo" >返回</button>
+</view>
+</block>

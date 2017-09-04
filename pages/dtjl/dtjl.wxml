@@ -1,0 +1,15 @@
+<!--dtjl.wxml-->
+<!--答题记录-->
+<view class="page" bindtouchstart="bindtouchstart" bindtouchend="bindtouchend">
+    <view class="page__bd">
+        <view class="weui-cells__title">答题记录</view>
+        <view class="weui-panel weui-panel_access no-br">
+            <view class="weui-panel__bd">
+                <navigator class="weui-media-box weui-media-box_text" wx:for="{{list}}" url="../dtjlmx/dtjlmx?day={{item.start_time}}">
+                    <view class="weui-media-box__title weui-media-box__title_in-text">共答题{{item.totalCount}}道，答对{{item.rightCount}}题，答错{{item.errorCount}}题</view>
+                    <view class="weui-media-box__desc">答题日期:{{item.start_time}}</view>
+                </navigator>
+            </view>
+        </view>
+    </view>
+</view>

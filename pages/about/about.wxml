@@ -1,0 +1,20 @@
+<view class="page">
+<view class="page__hd">
+        <view class="page__title"></view>
+        <view class="page__desc"></view>
+    </view>
+  <view class="page__bd">
+    <view class="weui-article">
+      <view class="weui-article__p" style="text-align:center">使用微信扫码获取考学宝2.0</view>
+      <view class="weui-article__p" style="text-align:center">
+        <image binderror="onImageError" class="weui-article__img" src="{{qrcodeurl}}" mode="aspectFit" style="width:280px" />
+      </view>
+    </view>
+    <view class="weui-footer weui-footer_fixed-bottom">
+            <view class="weui-footer__links">
+                <navigator url="" class="weui-footer__link">广东科溢科技有限公司</navigator>
+            </view>
+            <view class="weui-footer__text">Copyright © 2016 www.gdkyit.com</view>
+        </view>
+  </view>
+</view>

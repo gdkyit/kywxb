@@ -1,0 +1,19 @@
+
+
+<view class="weui-article__h1 myhead">收到的出题点赞</view> 
+<view class="weui-cells__title">收到的赞总数：{{totalSize}}</view>
+<view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell" wx:for="{{selectItems}}" wx:key="value">
+                <view class="weui-cell__hd" style="position: relative;margin-right: 10px;">
+                    <i class="czs-heart" style="color:#e10000;font-size:28px" ></i>
+                </view>
+                <view class="weui-cell__bd">
+                    <view style="font-size: 16px;">{{item.user_name}}</view>
+                        <view style="font-size: 13px;color: #888888;">{{item.content}}</view>
+                </view>
+                        <view style="display: inline-block;vertical-align:middle; font-size: 13px;color: #888888;">{{item.dz_date}}</view>
+            </view>
+</view>
+<view class="weui-btn-area">
+        <button class="weui-btn"  type="defult" bindtap="backTo" >返回</button>
+</view>

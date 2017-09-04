@@ -1,0 +1,57 @@
+<view class="userInfoUpdate">
+    <form bindsubmit="putUserInfo" >
+    <view class="userContainer">
+            <view  bindtap="previewImage" id="{{files}}">
+                <image  class="userinfo-avatar" src="{{!files?photo:files}}" mode="aspectFill" binderror="onImageError" />
+            </view>
+            <button class="weui-btn mini-btn" type="default" size="mini" bindtap="chooseImage">上传新头像</button>
+    </view>
+    <view class="userInfo">
+        <view class="weui-cell weui-cell_input inputStart">
+                    <view class="weui-cell__hd">
+                        <view class="weui-label">姓名：</view>
+                    </view>
+                    <view class="weui-cell__bd">
+                        <input name="name" class="weui-input" value="{{name}}" placeholder="请输入姓名"/>
+                    </view>
+        </view>
+        <view class="weui-cell weui-cell_input">
+                    <view class="weui-cell__hd">
+                        <view class="weui-label">手机：</view>
+                    </view>
+                    <view class="weui-cell__bd">
+                        <input name="phone" class="weui-input" value="{{phone}}" placeholder="请输入手机"/>
+                    </view>
+        </view>
+        <view class="weui-cell weui-cell_input">
+                    <view class="weui-cell__hd">
+                        <view class="weui-label">出生年月：</view>
+                    </view>
+                    <view class="weui-cell__bd">
+                        <picker name="birthday" mode="date" value="{{birthday}}"  end="{{endTime}}" bindchange="bindBirthdayChange">
+                            <view class="weui-input">{{birthday}}</view>
+                        </picker>
+                    </view>
+        </view>
+        <view class="weui-cell weui-cell_input inputEnd">
+                    <view class="weui-cell__hd">
+                        <view class="weui-label">入职日期：</view>
+                    </view>
+                    <view class="weui-cell__bd">
+                        <picker name="rzday" mode="date" value="{{rzday}}"  end="{{endTime}}" bindchange="bindRzdayChange">
+                            <view class="weui-input">{{rzday}}</view>
+                        </picker>
+                    </view>
+        </view>
+        <view class="weui-btn-area">
+        <button class="weui-btn" disabled="{{disableUserInfo}}" type="primary" formType="submit" loading="{{loadingUserInfo}}" >提交修改</button>
+        </view>
+    </view>
+    </form>
+    <view class="weui-btn-area">
+        <button class="weui-btn"  type="defult" bindtap="backTo" >返回</button>
+    </view>
+      <view  style="visibility:hidden;margin-left:-9999px;" >
+        <canvas style="width: {{canWidth}}px;height: {{canHeight}}px;visibility:hidden;" canvas-id="attendCanvasId"/>
+      </view>
+</view>

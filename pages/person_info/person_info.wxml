@@ -1,0 +1,31 @@
+<!--person_info.wxml-->
+<!-- 用户信息 -->
+<view class="page">
+    <view class="page__bd">
+        <view class="weui-flex info-user-wrap">
+            <view class="info-avatar-wrap">
+                <image class="info-avatar-img" src="{{PHOTO}}" mode="aspectFill" binderror="onImageError" />
+            </view>
+            <view>
+                <view class="info-user-name">{{USER_NAME}}</view>
+                <view class="info-user-dept">{{parentDept+dept}}</view>
+            </view>
+        </view>
+        <view class="weui-cells weui-cells_after-title no-br info-user-desc">
+            <view class="weui-cell">
+                <view class="weui-cell__bd">生日：{{BIRTHDAY ? BIRTHDAY :'未设置生日' }}</view>
+            </view>
+            <view class="weui-cell">
+                <view class="weui-cell__bd">入职时间：{{RZSJ ? RZSJ :'未设置入职时间'}}</view>
+            </view>
+        </view>
+        <view class="weui-cells__title">个人积分情况</view>
+        <view class="weui-cells weui-cells_after-title no-br info-rank">
+            <view class="weui-cell" wx:for="{{userScore}}" wx:key="fl_id">
+                <view class="weui-cell__bd">{{item.tkmc}}</view>
+                <view class="weui-cell__ft"><span class="info-rank-score">{{item.score + '分'}}</span></view>
+            </view>
+        </view>
+
+    </view>
+</view>

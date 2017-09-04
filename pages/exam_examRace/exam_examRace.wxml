@@ -1,0 +1,21 @@
+<view class="weui-cells__title">可进行考试</view>
+<view class="weui-cells weui-cells_after-title">
+    <block wx:if="{{recordList.length!=0}}" wx:for="{{recordList}}" wx:key="unique">
+    <view bindtap="selectExam" data-examid="{{item.id_}}" data-remark="{{item.remark}}" class="weui-cell weui-cell_access weui-flex" hover-class="weui-cell_active">
+        <view class="weui-media-box weui-media-box_text weui-flex__item">
+            <view class="weui-media-box__title weui-media-box__title_in-text">{{item.TITLE}}</view>
+            <view class="weui-media-box__desc"><view>开始时间：{{item.START_TIME}}</view><view>结束时间：{{item.END_TIME}}</view></view>
+        </view>
+    </view>
+    </block>
+    <block wx:if="{{recordList.length==0}}" >
+        <view class="page__bd">
+            <view class="weui-loadmore ">
+                <view class="weui-loadmore__tips weui-loadmore__tips_in-line">暂无可进行考试</view>
+            </view>
+            <view class="weui-loadmore weui-loadmore_line weui-loadmore_dot">
+                <view class="weui-loadmore__tips weui-loadmore__tips_in-line weui-loadmore__tips_in-dot"></view>
+            </view>
+        </view>
+    </block>
+</view>

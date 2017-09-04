@@ -1,0 +1,16 @@
+<!--dtjlmx.wxml-->
+<!-- 答题记录明细 -->
+<view class="page" bindtouchstart="bindtouchstart" bindtouchend="bindtouchend">
+    <view class="page__bd">
+        <view class="weui-panel weui-panel_access no-br">
+            <view class="weui-panel__bd">
+                <view class="weui-media-box weui-media-box_text" wx:for="{{list}}">
+                   <view class="weui-media-box__title weui-media-box__title_in-text">
+                        你的答案是{{!!item.answer ? item.answer:' 没作答 '}}，结果{{item.result == 'Y'?' 正确 ':' 错误 '}}，得分{{item.score}}
+                    </view>
+                    <view class="weui-media-box__desc">{{item.content}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

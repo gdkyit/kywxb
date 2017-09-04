@@ -1,0 +1,6 @@
+    <view class="weui-footer weui-footer_fixed-bottom">
+            <view class="weui-footer__links">
+                <navigator url="../getapp/getapp" class="weui-footer__link">河源国税考学宝</navigator>
+            </view>
+            <view class="weui-footer__text">Copyright © 2017 keyiit.cn</view>
+        </view>
