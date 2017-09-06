@@ -117,6 +117,6 @@ Page({
         });
     },
     onImageError(e){
-        this.setData({PHOTO:'../../resource/img/avatar.png'})
+        this.setData({IUrl:'../../resource/img/avatar.png'})
     }
 })

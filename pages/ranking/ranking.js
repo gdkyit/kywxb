@@ -15,8 +15,8 @@ Page({
     userExam: [],
     userExamRank: {},
     examRank: [],
-    groupName:'',
-    currentSubCat:''
+    groupName: '',
+    currentSubCat: ''
   },
 
   /**
@@ -27,7 +27,7 @@ Page({
     this.getJfb();
     this.getUserInfo();
   },
-  
+
   getUserInfo() {
     let app = getApp();
     let that = this;
@@ -50,7 +50,7 @@ Page({
                 personScoreRank: rs.userScoreRank,
                 recordMap: rs.userInfo,
                 userName: rs.userInfo.USER_NAME,
-                groupName:rs.group.GROUP_NAME,
+                groupName: rs.group.GROUP_NAME,
                 IUrl: !!rs.userInfo.PHOTO ? urlHost + rs.userInfo.PHOTO + "?date=" + new Date().getTime() : '../../resource/img/avatar.png',
                 contribution: !rs.userGxz.gxz ? rs.userGxz.count : rs.userGxz.gxz,
                 totalScore: typeof rs.userScoreRank == "string" ? "无" : rs.userScoreRank.score.toFixed(2),
@@ -441,7 +441,7 @@ Page({
     this.getQzb(gid);
     this.setData({
       view: '12',
-      currentSubCat:scat
+      currentSubCat: scat
     })
   },
   bindUserExam(e) {
@@ -450,7 +450,7 @@ Page({
     this.getKsb(eid);
     this.setData({
       view: '22',
-      currentSubCat:scat
+      currentSubCat: scat
     })
   },
   bindUserFlpm(e) {
@@ -459,14 +459,14 @@ Page({
     this.getFlpm(eid);
     this.setData({
       view: '32',
-      currentSubCat:scat
+      currentSubCat: scat
     })
   },
   bindPhbChange: function (e) {
-    let phb =  e.currentTarget.dataset.phb
+    let phb = e.currentTarget.dataset.phb
     this.setData({
       current: phb,
-      currentSubCat:''
+      currentSubCat: ''
     })
     if (phb == 0) {
       this.getJfb();
@@ -497,6 +497,11 @@ Page({
         view: pv
       })
     }
+  },
+  onImageError(e) {
+    this.setData({
+      IUrl: '../../resource/img/avatar.png'
+    })
   }
 
 })
