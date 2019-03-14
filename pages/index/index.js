@@ -3,7 +3,7 @@ Page({
     data: {
 
     },
-    onLoad: function (option) {
+/*     onLoad: function (option) {
 
         wx.getStorage({ //获取token
             key: 'token',
@@ -23,7 +23,7 @@ Page({
                 },3000)
             }
         })
-    },
+    }, */
     
 
 

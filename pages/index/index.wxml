@@ -1,21 +1,5 @@
-<!-- 背景正方形 -->
-<view >
-                    <ul class="bg-bubbles">
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                    </ul>
-                </view>
-<!-- 滚动条 -->
-<view class=" weui-footer_fixed-bottom" >
-<view id="content" class="fullwidth" >
-<span class="expand"></span>
-</view>
-</view>
+<view class="u-info-bg"></view>
+<view class="u-info-main"></view>
+<view class="u-info-personal"></view>
+<view class="p-grid"></view>
+<view class="p-footer">清洁接单1.0</view>

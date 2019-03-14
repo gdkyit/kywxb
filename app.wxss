@@ -1,17 +1,13 @@
 /**app.wxss**/
 /*
 * #000000 Black 主要内容、标题字色
-* #888888 Grey 次要信息字色
-* #353535 Semi Black 大段的说明且属于主要内容
-* #bfbfbf Light 暗提示色
-* #f4333c 错误、警示色
-* #ff5b05 重点提醒色
-* #f5f5f9 app底色
-* #3FBE69 app主题色
+* #666666 Grey 次要信息字色
+* #333333 Semi Black 大段的说明且属于主要内容
+* #FAFBFC 背景色1  #ECF5FD 背景色2
+* #5D8EE8 主题色  #89b2f5 辅色
+* 辅助色 蓝#78A4FA,绿#13CE66,红#FF7979,黄FFC82C
 */
 
-@import 'style/weui.wxss';
-@import 'style/CaoMei-master/style.wxss';
 .container {
     height: 100%;
     display: flex;
@@ -57,87 +53,4 @@ page {
     color: #888888;
     text-align: left;
     font-size: 14px;
-}
-
-button[type="primary"] {
-    background-color: #3FBE69;
-}
-button[loading][type="primary"]{
-    background-color: #3FBE69;
-}
-
-button[disabled][type="primary"] {
-    background-color: #9fdeb4;
-}
-.weui-cell::before{
-    border-top: 1px solid #f0f0f0
-}
-.weui-cells::after{
-    border-bottom: 1px solid #f0f0f0;
-    color: #eee
-}
-.no-br::before{
-border-top: none
-}
-.no-br::after{
-border-bottom: none
-}
-.br-lt{
-    border:1px solid #eee;
-}
-
-.weui-navbar__item.weui-bar__item_on {
-    color: #3FBE69;
-}
-
-.weui-navbar__slider {
-    background-color: #3FBE69
-}
-
-.navbar {
-    flex: none;
-    display: flex;
-    background: #fff;
-}
-
-.navbar .item {
-    position: relative;
-    color: #ddd;
-    flex: auto;
-    text-align: center;
-    line-height: 80rpx;
-    font-family: '微软雅黑';
-}
-
-.navbar .item.active {
-    color: #1955A7;
-}
-
-.navbar .item.active:after {
-    content: "";
-    display: block;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 4rpx;
-    background: #1955A7;
-}
-
-.rankLevel {
-    display: flex;
-    /*flex-direction:column;
-    align-items:center;*/
-}
-
-.rank_icon {
-    width: 40rpx;
-    height: 40rpx;
-}
-
-.userinfo-avatar {
-    width: 128rpx;
-    height: 128rpx;
-    margin: 20rpx;
-    border-radius: 50%;
 }
