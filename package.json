@@ -1,0 +1,26 @@
+{
+  "name": "yujietuo-task-sendout",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+    "wuss-weapp": "^2.1.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gdkyit/kywxb.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gdkyit/kywxb/issues"
+  },
+  "homepage": "https://github.com/gdkyit/kywxb#readme"
+}

@@ -1,5 +1,38 @@
-<view class="u-info-bg"></view>
-<view class="u-info-main"></view>
-<view class="u-info-personal"></view>
-<view class="p-grid"></view>
-<view class="p-footer">清洁接单1.0</view>
+<view class="p-body">
+    <view class="y-notice">
+        <w-notice icon="voice" color="#fff" backgroundColor="#C5D9E8" scrollable="{{ true }}" speed="30" mode="closeable" text="金盯湾望海公寓s4栋1501房60平方清洁任务等待带走" />
+    </view>
+    <view class="u-info">
+        <view class="u-info-main misa-shadow">
+            <w-row gutter="5">
+                <w-col span="8">
+                    <w-avatar wuss-class="u-avatar" size="large" shape="circle" src="/resource/img/avatar-man.png" />
+                </w-col>
+                <w-col spsan="16" class="um-group">
+                    <view class="u-name">Jonnie</view>
+                    <view class="u-club-level">白金作手</view>
+                </w-col>
+            </w-row>
+        </view>
+        <view class="u-info-personal">
+            <w-row>
+                <w-col span="12">
+                    <view class="u-i-box">
+                        <h3>66</h3>
+                        <p>累计任务</p>
+                    </view>
+                </w-col>
+                <w-col span="12" >
+                    <view class="u-i-box">
+                        <h3>9888</h3>
+                        <p>累计收入</p>
+                    </view>
+                </w-col>
+            </w-row>
+        </view>
+    </view>
+    <view class="p-grid"></view>
+</view>
+<view class="p-footer">
+    <p>清洁接单1.0</p>
+</view>

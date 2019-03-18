@@ -1,5 +1,59 @@
-
-Page{
-    background-position-x: 50%;
+.p-body{
+    padding: 8rpx 16rpx 16rpx 16rpx
 }
-
+.p-footer {
+  color: #666666;
+  font-size: 24rpx;
+  text-align: center;
+  padding: 10rpx;
+  position: fixed;
+  bottom: 20rpx;
+  left: 0;
+  right: 0;
+}
+.u-info {
+  padding-top:16rpx;
+}
+.u-info-main {
+  background: linear-gradient(to right, #5D8EE8, #89b2f5);
+  height: 150rpx;
+  border-radius: 12rpx;
+  padding: 48rpx 40rpx;
+}
+.misa-shadow {
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1),0 6px 24px rgba(153, 153, 153, 0.5)
+}
+.u-avatar{
+    background-color: #Ffffff !important;
+    width:150rpx !important;
+    height: 150rpx !important;
+}
+.um-group{
+    margin-top: 40rpx
+}
+.u-name {
+    font-size: 40rpx;
+    color:#ffffff;
+}
+.u-club-level{
+    color:#ECF5FD;
+    font-size: 20rpx
+}
+.u-info-personal {
+    padding: 24rpx;
+    border-bottom: 1px #e5e5e5 solid
+}
+.u-info-personal p{
+    font-size:24rpx;
+    color:#666666
+}
+.u-info-personal h3{
+    font-size:48rpx;
+    font-weight: 600;
+    color:#000000
+}
+.u-i-box{
+    padding:24rpx;
+    height: 80rpx;
+    text-align: center
+}
