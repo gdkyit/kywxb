@@ -1,9 +1,1 @@
-{
-  "usingComponents": {
-    "w-card": "wuss-weapp/w-card/index",
-    "w-row": "wuss-weapp/w-row/index",
-    "w-col": "wuss-weapp/w-col/index",
-    "w-avatar": "wuss-weapp/w-avatar/index",
-    "w-notice": "wuss-weapp/w-notice/index"
-  }
-}
+{}

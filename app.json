@@ -1,12 +1,22 @@
 {
   "pages": [
-    "pages/index/index"
+    "pages/index/index",
+    "pages/gettask/gettask"
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#2F3442",
-    "navigationBarTitleText": "清洁任务",
-    "navigationBarTextStyle": "white",
+    "navigationBarBackgroundColor": "#FAFBFC",
+    "navigationBarTitleText": "寓洁妥清洁任务接单",
+    "navigationBarTextStyle": "black",
     "backgroundColor": "#FAFBFC"
+  },
+  "usingComponents": {
+    "w-card": "wuss-weapp/w-card/index",
+    "w-row": "wuss-weapp/w-row/index",
+    "w-col": "wuss-weapp/w-col/index",
+    "w-avatar": "wuss-weapp/w-avatar/index",
+    "w-notice": "wuss-weapp/w-notice/index",
+    "w-icon": "wuss-weapp/w-icon/index"
   }
+
 }

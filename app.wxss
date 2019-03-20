@@ -1,9 +1,10 @@
 /**app.wxss**/
 /*
-* #000000 Black 主要内容、标题字色
+* #333333 Black 主要内容、标题字色
 * #666666 Grey 次要信息字色
-* #333333 Semi Black 大段的说明且属于主要内容
+* #999999 次次要字色
 * #FAFBFC 背景色1  #ECF5FD 背景色2
+* #E5E5E5 分割线
 * #5D8EE8 主题色  #89b2f5 辅色
 * 辅助色 蓝#78A4FA,绿#13CE66,红#FF7979,黄FFC82C
 */
@@ -19,11 +20,23 @@
 }
 
 page {
-    background-color: #F8F8F8;
-    font-size: 16px;
+    background-color: #FAFBFC;
+    font-size: 24rpx;
     font-family: -apple-system-font, Helvetica Neue, Helvetica, sans-serif;
 }
-
+.p-body{
+    padding: 8rpx 16rpx 16rpx 16rpx
+}
+.p-footer {
+  color: #999999;
+  font-size: 24rpx;
+  text-align: center;
+  padding: 10rpx;
+  position: fixed;
+  bottom: 20rpx;
+  left: 0;
+  right: 0;
+}
 .page__hd {
     padding: 40px;
 }

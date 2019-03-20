@@ -1,4 +1,16 @@
-
+.p-body{
+    padding: 8rpx 16rpx 16rpx 16rpx
+}
+.p-footer {
+  color: #999999;
+  font-size: 24rpx;
+  text-align: center;
+  padding: 10rpx;
+  position: fixed;
+  bottom: 20rpx;
+  left: 0;
+  right: 0;
+}
 .u-info {
   padding-top:16rpx;
   border-bottom: 1px solid #e5e5e5
