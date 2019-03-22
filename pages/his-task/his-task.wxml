@@ -1,0 +1,50 @@
+<w-pane title="我的历史接单" />
+<view class="">
+    <w-cell-group>
+        <w-cell isLink highlight desc="一房一厅，金额 40元" wuss-class-hd="w-cell-hd" wuss-class-left="w-cell-left">
+            <view slot="label" class="w-cell-label" hover-class="none" hover-stop-propagation="false">
+                <view class="left" hover-class="none" hover-stop-propagation="false">金盯湾s1栋1504</view>
+                <view style="font-size: 14px;color: #999999;" class="right" hover-class="none" hover-stop-propagation="false">
+                    10-31 09:12
+                </view>
+            </view>
+            <image slot="icon" class="w-cell-avatar" src="/resource/img/house.png" />
+        </w-cell>
+        <w-cell isLink highlight desc="一房一厅，金额 40元" wuss-class-hd="w-cell-hd" wuss-class-left="w-cell-left">
+            <view slot="label" class="w-cell-label" hover-class="none" hover-stop-propagation="false">
+                <view class="left" hover-class="none" hover-stop-propagation="false">金盯湾s1栋1504</view>
+                <view style="font-size: 14px;color: #999999;" class="right" hover-class="none" hover-stop-propagation="false">
+                    10-31 09:12
+                </view>
+            </view>
+            <image slot="icon" class="w-cell-avatar" src="/resource/img/house.png" />
+        </w-cell>
+        <w-cell isLink highlight desc="一房一厅，金额 40元" wuss-class-hd="w-cell-hd" wuss-class-left="w-cell-left">
+            <view slot="label" class="w-cell-label" hover-class="none" hover-stop-propagation="false">
+                <view class="left" hover-class="none" hover-stop-propagation="false">金盯湾s1栋1504</view>
+                <view style="font-size: 14px;color: #999999;" class="right" hover-class="none" hover-stop-propagation="false">
+                    10-31 09:12
+                </view>
+            </view>
+            <image slot="icon" class="w-cell-avatar" src="/resource/img/house.png" />
+        </w-cell>
+        <w-cell isLink highlight desc="一房一厅，金额 40元" wuss-class-hd="w-cell-hd" wuss-class-left="w-cell-left">
+            <view slot="label" class="w-cell-label" hover-class="none" hover-stop-propagation="false">
+                <view class="left" hover-class="none" hover-stop-propagation="false">金盯湾s1栋1504</view>
+                <view style="font-size: 14px;color: #999999;" class="right" hover-class="none" hover-stop-propagation="false">
+                    10-31 09:12
+                </view>
+            </view>
+            <image slot="icon" class="w-cell-avatar" src="/resource/img/house.png" />
+        </w-cell>
+        <w-cell isLink highlight desc="一房一厅，金额 40元" wuss-class-hd="w-cell-hd" wuss-class-left="w-cell-left">
+            <view slot="label" class="w-cell-label" hover-class="none" hover-stop-propagation="false">
+                <view class="left" hover-class="none" hover-stop-propagation="false">金盯湾s1栋1504</view>
+                <view style="font-size: 14px;color: #999999;" class="right" hover-class="none" hover-stop-propagation="false">
+                    10-31 09:12
+                </view>
+            </view>
+            <image slot="icon" class="w-cell-avatar" src="/resource/img/house.png" />
+        </w-cell>
+    </w-cell-group>
+</view>

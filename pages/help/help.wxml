@@ -1,0 +1,27 @@
+<w-pane title="使用帮助" />
+<view class="p-body">
+    <view class="p-block">
+        <view class="h3">如何接单</view>
+        <view class="p-article">
+            <text>内容内容内容内容内容内容内容内容内容内容内容内容内容</text>
+        </view>
+    </view>
+    <view class="p-block">
+        <view class="h3">如何结算</view>
+        <view class="p-article">
+            <text>内容内容内容内容内容内容内容内容内容内容内容内容内容</text>
+        </view>
+    </view>
+    <view class="p-block">
+        <view class="h3">验收标准</view>
+        <view class="p-article">
+            <text>内容内容内容内容内容内容内容内容内容内容内容内容内容</text>
+        </view>
+    </view>
+    <view class="p-block">
+        <view class="h3">会员等级</view>
+        <view class="p-article">
+            <text>内容内容内容内容内容内容内容内容内容内容内容内容内容</text>
+        </view>
+    </view>
+</view>

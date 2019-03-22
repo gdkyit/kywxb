@@ -1,7 +1,9 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/gettask/gettask"
+    "pages/gettask/gettask",
+    "pages/help/help",
+    "pages/his-task/his-task"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -16,7 +18,11 @@
     "w-col": "wuss-weapp/w-col/index",
     "w-avatar": "wuss-weapp/w-avatar/index",
     "w-notice": "wuss-weapp/w-notice/index",
-    "w-icon": "wuss-weapp/w-icon/index"
+    "w-icon": "wuss-weapp/w-icon/index",
+    "w-pane": "wuss-weapp/w-pane/index",
+    "w-drop-menu": "wuss-weapp/w-drop-menu/index",
+    "w-cell": "wuss-weapp/w-cell/index",
+    "w-cell-group": "wuss-weapp//w-cell-group/index"
   }
 
 }

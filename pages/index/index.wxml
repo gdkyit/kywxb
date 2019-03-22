@@ -1,7 +1,9 @@
 <view class="p-body">
     <view class="p-assist">
-        <w-icon type="question-o" size="28" style="margin-right:8rpx"/>
-        <text>帮助</text>
+        <navigator url="/pages/help/help">
+            <w-icon type="question-o" size="28" style="margin-right:8rpx" />
+            <text>帮助</text>
+        </navigator>
     </view>
     <view class="u-info">
         <view class="u-info-main misa-shadow">
@@ -45,10 +47,12 @@
         <w-row>
             <w-col span="8">
                 <view class="grid-box">
-                    <view class="box-icon">
-                        <image mode="aspectFill" src="/resource/img/cleaning.png"></image>
-                    </view>
-                    <view class="box-text">接单</view>
+                    <navigator url="/pages/gettask/gettask">
+                        <view class="box-icon">
+                            <image mode="aspectFill" src="/resource/img/cleaning.png"></image>
+                        </view>
+                        <view class="box-text">接单</view>
+                    </navigator>
                 </view>
             </w-col>
             <w-col span="8">
@@ -61,12 +65,14 @@
             </w-col>
             <w-col span="8">
                 <view class="grid-box">
-                    <view class="box-icon">
+                    <navigator url="/pages/his-task/his-task">
                         <view class="box-icon">
-                            <image mode="aspectFill" src="/resource/img/search.png"></image>
+                            <view class="box-icon">
+                                <image mode="aspectFill" src="/resource/img/search.png"></image>
+                            </view>
                         </view>
-                    </view>
-                    <view class="box-text">接单查询</view>
+                        <view class="box-text">接单查询</view>
+                    </navigator>
                 </view>
             </w-col>
         </w-row>

@@ -1,77 +1,13 @@
+<w-pane title="可接单任务" />
+<w-drop-menu options="{{  options  }}" bind:onChange="handleChange" activeColor="#5D8EE8"></w-drop-menu>
 <view class="p-body">
-    <view class="p-assist">
-        <w-icon type="question-o" size="28" style="margin-right:8rpx"/>
-        <text>帮助</text>
+    <view class="task-card" wx:for="{{tasks}}">
+        <w-card 
+        loading="{{ loading }}" 
+        title="金盯湾S4栋{{item.room}}全屋清洁" 
+        extra="{{item.price}}" 
+        content="一房一厅，地面清洁、门窗清洁、家具清洁、布草整理" 
+        footer="面积：{{item.area}}平方" 
+        footer-extra="日期：2019-04-21" />
     </view>
-    <view class="u-info">
-        <view class="u-info-main misa-shadow">
-            <w-row gutter="5">
-                <w-col span="8">
-                    <w-avatar wuss-class="u-avatar" size="large" shape="circle" src="/resource/img/avatar-man.png" />
-                </w-col>
-                <w-col spsan="16" class="um-group">
-                    <view class="u-name">Jonnie</view>
-                    <view class="u-club-level">白金作手</view>
-                </w-col>
-            </w-row>
-        </view>
-        <view class="u-info-personal">
-            <w-row>
-                <w-col span="8">
-                    <view class="u-i-box">
-                        <view class="box-h3">66</view>
-                        <view class="box-text">累计接单</view>
-                    </view>
-                </w-col>
-                <w-col span="8">
-                    <view class="u-i-box">
-                        <view class="box-h3">199</view>
-                        <view class="box-text">待验收金额</view>
-                    </view>
-                </w-col>
-                <w-col span="8">
-                    <view class="u-i-box">
-                        <view class="box-h3">2888</view>
-                        <view class="box-text">账户金额</view>
-                    </view>
-                </w-col>
-            </w-row>
-        </view>
-    </view>
-    <view class="p-notice">
-        <w-notice icon="voice" color="#666666" backgroundColor="#FAFBFC" scrollable="{{ true }}" speed="30" text="金盯湾望海公寓s4栋1501房60平方清洁任务等待带走" />
-    </view>
-    <view class="p-grid">
-        <w-row>
-            <w-col span="8">
-                <view class="grid-box">
-                    <view class="box-icon">
-                        <image mode="aspectFill" src="/resource/img/cleaning.png"></image>
-                    </view>
-                    <view class="box-text">接单</view>
-                </view>
-            </w-col>
-            <w-col span="8">
-                <view class="grid-box">
-                    <view class="box-icon">
-                        <image mode="aspectFill" src="/resource/img/todo.png"></image>
-                    </view>
-                    <view class="box-text">当前待办</view>
-                </view>
-            </w-col>
-            <w-col span="8">
-                <view class="grid-box">
-                    <view class="box-icon">
-                        <view class="box-icon">
-                            <image mode="aspectFill" src="/resource/img/search.png"></image>
-                        </view>
-                    </view>
-                    <view class="box-text">接单查询</view>
-                </view>
-            </w-col>
-        </w-row>
-    </view>
-</view>
-<view class="p-footer">
-    <text>清洁接单1.0</text>
 </view>

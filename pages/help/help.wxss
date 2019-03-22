@@ -1,0 +1,8 @@
+
+.p-block{
+    margin-bottom: 48rpx;
+}
+.h3{
+    color:#333333;
+    font-weight: bold;
+}
