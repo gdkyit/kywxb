@@ -1,3 +1,5 @@
 typings/wx.d.ts
 .vscode/settings.json
 jsconfig.json
+miniprogram_npm/
+node_modules/
