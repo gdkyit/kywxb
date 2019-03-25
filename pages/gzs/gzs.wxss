@@ -1,0 +1,8 @@
+/* pages/w-input/index.wxss */
+page {
+  background-color: #fafafa;
+}
+.p-body {
+  padding:48rpx;
+  font-size: 1.025em;
+}

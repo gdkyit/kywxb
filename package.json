@@ -7,7 +7,7 @@
     "lib": "lib"
   },
   "dependencies": {
-    "vant-weapp": "^0.5.7"
+    "wuss-weapp": "^2.1.3"
   },
   "devDependencies": {},
   "scripts": {

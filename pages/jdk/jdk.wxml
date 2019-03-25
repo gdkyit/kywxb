@@ -1,0 +1,63 @@
+
+<w-pane title="1.有无不把思想和行动统一到党中央、国务院和税务总局、省委省政府、省税务局的决策部署上来，阳奉阴违、发表不恰当言论。"  />
+<w-cell-group>
+ <w-radio options="{{ dataItems }}" bindonChange="handleonChange" defaultValue ="N"/>
+</w-cell-group>
+
+<w-pane title="2.有无落实减税降费决策部署不坚决，打折扣、搞变通。"  />
+<w-cell-group>
+ <w-radio options="{{ dataItems }}" bindonChange="handleonChange" defaultValue ="N"/>
+</w-cell-group>
+
+<w-pane title="2.有无落实减税降费决策部署不坚决，打折扣、搞变通。"  />
+<w-cell-group>
+ <w-radio options="{{ dataItems }}" bindonChange="handleonChange" defaultValue ="N"/>
+</w-cell-group>
+
+<w-pane title="3.有无在减税降费工作中以权谋私，收受纳税人（缴费人）礼品、礼金、消费卡等财物。"  />
+<w-cell-group>
+ <w-radio options="{{ dataItems }}" bindonChange="handleonChange" defaultValue ="N"/>
+</w-cell-group>
+
+<w-pane title="4.有无在落实减税降费工作中刁难纳税人（缴费人）、吃拿卡要或优亲厚友、明显有失公平。"  />
+<w-cell-group>
+ <w-radio options="{{ dataItems }}" bindonChange="handleonChange" defaultValue ="N"/>
+</w-cell-group>
+
+<w-pane title="5.有无在落实减税降费工作中，对待纳税人（缴费人）态度恶劣、简单粗暴。"  />
+<w-cell-group>
+ <w-radio options="{{ dataItems }}" bindonChange="handleonChange" defaultValue ="N"/>
+</w-cell-group>
+
+<w-pane title="6.有无在落实减税降费工作中弄虚作假，欺上瞒下。"  />
+<w-cell-group>
+ <w-radio options="{{ dataItems }}" bindonChange="handleonChange" defaultValue ="N"/>
+</w-cell-group>
+
+<w-pane title="7.有无存在“门难进、脸难看、事难办”问题。"  />
+<w-cell-group>
+ <w-radio options="{{ dataItems }}" bindonChange="handleonChange" defaultValue ="N"/>
+</w-cell-group>
+
+<w-pane title="8.有无存在不依法依规落实政策、办事效率低下等问题。"  />
+<w-cell-group>
+ <w-radio options="{{ dataItems }}" bindonChange="handleonChange" defaultValue ="N"/>
+</w-cell-group>
+
+<w-pane title="9.有无其他违反廉洁自律的行为。"  />
+<w-cell-group>
+ <w-radio options="{{ dataItems }}" bindonChange="handleonChange" defaultValue ="N"/>
+</w-cell-group>
+
+<w-pane title="税务人员在减税降费工作中存在的主要问题以及您的意见和建议"  />
+<w-cell-group>
+	<w-input
+	 clear
+	 count="100"
+	 type="textarea"
+	 placeholder="（谢谢您对我们工作的支持！您所反映的内容我们将会予以保密。）"
+	/>
+</w-cell-group>
+
+<w-button type="primary" bind:onClick="handleFocus">提交</w-button>
+

@@ -1,0 +1,9 @@
+{
+    "usingComponents": {
+      "w-cell": "wuss-weapp/w-cell/index",
+      "w-cell-group": "wuss-weapp/w-cell-group/index",
+      "w-input": "wuss-weapp/w-input/index",
+      "w-button": "wuss-weapp/w-button/index",
+      "w-pane": "wuss-weapp/w-pane/index"
+    }
+  }

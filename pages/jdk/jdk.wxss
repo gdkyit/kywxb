@@ -1,0 +1,4 @@
+/* pages/w-input/index.wxss */
+page {
+  background-color: #fafafa
+}

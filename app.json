@@ -1,7 +1,5 @@
 {
-  "pages": [
-    "pages/index/index"
-  ],
+  "pages": ["pages/index/index", "pages/gzs/gzs","pages/jdk/jdk"],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#4981f2",
@@ -10,8 +8,16 @@
     "backgroundColor": "#deeefc"
   },
   "usingComponents": {
-    "van-row": "vant-weapp/row/index",
-    "van-col": "vant-weapp/col/index",
-    "van-field": "vant-weapp/field/index"
+    "w-row": "wuss-weapp/w-row/index",
+    "w-col": "wuss-weapp/w-col/index",
+    "w-cell": "wuss-weapp/w-cell/index",
+    "w-input": "wuss-weapp/w-input/index",
+    "w-checkbox": "wuss-weapp/w-checkbox/index",
+    "w-button": "wuss-weapp/w-button/index",
+    "w-form": "wuss-weapp/w-form/index",
+    "w-switch": "wuss-weapp/w-switch/index",
+    "w-radio": "wuss-weapp/w-radio/index",
+    "w-validate": "wuss-weapp/w-validate/index",
+    "w-pane": "wuss-weapp/w-pane/index"
   }
 }
