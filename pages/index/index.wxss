@@ -1,1 +1,49 @@
-
+.p-body {
+  background-color: #deeefc;
+  position: relative;
+}
+.p-top-bg {
+  background: linear-gradient(to bottom, #4981f2, #40a9ff);
+  height: 700rpx;
+  position: relative;
+  border-bottom-right-radius: 60% 40rpx;
+  border-bottom-left-radius: 60% 40rpx;
+}
+.p-focus-box {
+  position: absolute;
+  width: 582rpx;
+  bottom: -310rpx;
+  background-color: #ffffff;
+  height: 322rpx;
+  padding:24rpx;
+  right: 60rpx;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(153,153,153,0.1)
+}
+.title-line1 {
+    position: absolute;
+    top:120rpx;
+    left:75rpx
+}
+.title-line1 image{
+    width:600rpx;
+    height: 77rpx;
+}
+.title-line2 {
+    position: absolute;
+    top:200rpx;
+    left:75rpx
+}
+.title-line2 image{
+    width:600rpx;
+    height: 100rpx;
+}
+.bg-building {
+    position: absolute;
+    bottom:36rpx;
+    left:75rpx;
+}
+.bg-building image{
+    width:600rpx;
+    height: 300rpx;
+}

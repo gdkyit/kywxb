@@ -21,7 +21,7 @@
 }
 
 page {
-    background-color: #F8F8F8;
+    background-color: #deeefc;
     font-size: 1.125em;
     font-family: -apple-system-font, Helvetica Neue, Helvetica, sans-serif;
 }

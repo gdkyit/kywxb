@@ -1,3 +1,30 @@
 <view class="p-body">
-
+    <view class="p-top-bg">
+        <view class="title-line1">
+            <image mode="aspectFit" src="/resource/img/title-line1.png" />
+        </view>
+        <view class="title-line2">
+            <image mode="aspectFit" src="/resource/img/title-line2.png" />
+        </view>
+        <view class="bg-building">
+            <image mode="aspectFit" src="/resource/img/bg-building.png" />
+        </view>
+    </view>
+    <view class="p-focus-box">
+              
+        <!-- <van-row>
+            <van-col span="16">
+                <view class="box-main">
+                    <view class="h3">纳税人识别号</view>
+                   
+                </view>
+            </van-col>
+            <van-col span="8">
+                <view class="box-icon">
+                    <image mode="aspectFit" src="/resource/img/index-pic1.png" />
+                </view>
+            </van-col>
+        </van-row> -->
+        <!-- <van-field value="{{ value }}" placeholder="请输入用户名" border="{{ true }}" bind:change="onChange" /> -->
+    </view>
 </view>
